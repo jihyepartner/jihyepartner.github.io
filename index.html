@@ -135,7 +135,15 @@
   .qr-card img{display:block; width:180px; height:180px; margin:0 auto}
   .qr-card p{margin-top:10px; font-size:.9rem; line-height:1.5; color:var(--ink-3)}
   @media (max-width:860px){ .contact-grid{grid-template-columns:1fr; gap:32px} }
-  @media (max-width:640px){ .qr-card{display:none} }
+  @media (max-width:640px){ .qr-card, [data-kakao]{display:none} }
+  .is-phone [data-kakao], .is-phone .qr-card{display:none}
+  .qr-dialog{width:min(360px, calc(100% - 32px)); padding:32px 28px 24px; border:0; border-radius:22px; text-align:center; color:var(--ink); box-shadow:0 24px 60px rgba(8,28,94,.3)}
+  .qr-dialog::backdrop{background:rgba(8,28,94,.45)}
+  .qr-dialog h3{font-size:1.2rem; font-weight:700; letter-spacing:-.02em}
+  .qr-dialog img{display:block; width:220px; height:220px; margin:18px auto 14px}
+  .qr-dialog p{font-size:.95rem; line-height:1.6; color:var(--ink-3)}
+  .qr-dialog button{margin-top:20px; min-height:48px; width:100%; border:0; border-radius:999px; background:var(--blue); color:#fff; font:inherit; font-weight:600; cursor:pointer}
+  .qr-dialog button:hover{background:var(--blue-deep)}
 
   footer{max-width:1200px; margin:0 auto; padding:28px 24px 40px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px 24px; font-size:.88rem; color:var(--muted)}
 
@@ -258,10 +266,10 @@
     <div class="contact-grid">
     <div>
       <h2>경리 업무, <em>편하게 문의하세요</em></h2>
-      <p class="intro">통화가 어려우시면 문자나 카카오톡으로 성함과 업종을 남겨 주세요. 확인 후 연락드리겠습니다.</p>
+      <p class="intro">통화가 어려우시면 문자로 성함과 업종을 남겨 주세요. 확인 후 연락드리겠습니다.</p>
       <div class="actions">
         <a class="btn btn-blue" href="tel:01024228486"><svg width="20" height="20" aria-hidden="true"><use href="#i-phone"/></svg>010-2422-8486</a>
-        <a class="btn btn-kakao" href="http://qr.kakao.com/talk/5d4GLdNu.JwwKhup83F6Ai9VAdY-" target="_blank" rel="noopener"><svg width="20" height="20" aria-hidden="true"><use href="#i-kakao"/></svg>카카오톡 친구 추가</a>
+        <a class="btn btn-kakao" data-kakao href="http://qr.kakao.com/talk/5d4GLdNu.JwwKhup83F6Ai9VAdY-" target="_blank" rel="noopener"><svg width="20" height="20" aria-hidden="true"><use href="#i-kakao"/></svg>카카오톡 친구 추가</a>
         <a class="btn btn-line" href="sms:01024228486?body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94.%20%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%B3%B4%EA%B3%A0%20%EC%97%B0%EB%9D%BD%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4.%20%EC%84%B1%ED%95%A8%3A%20"><svg width="20" height="20" aria-hidden="true"><use href="#i-msg"/></svg>문자 보내기</a>
       </div>
       <p class="hint">휴대폰에서 누르시면 바로 연결됩니다.</p>
@@ -285,8 +293,30 @@
 <div class="call-bar">
   <a class="btn btn-blue" href="tel:01024228486"><svg width="20" height="20" aria-hidden="true"><use href="#i-phone"/></svg>전화</a>
   <a class="btn btn-line" href="sms:01024228486"><svg width="20" height="20" aria-hidden="true"><use href="#i-msg"/></svg>문자</a>
-  <a class="btn btn-kakao" href="http://qr.kakao.com/talk/5d4GLdNu.JwwKhup83F6Ai9VAdY-" target="_blank" rel="noopener"><svg width="20" height="20" aria-hidden="true"><use href="#i-kakao"/></svg>카톡</a>
 </div>
+
+<dialog class="qr-dialog" id="qr-dialog" aria-labelledby="qr-dialog-title">
+  <h3 id="qr-dialog-title">카카오톡 친구 추가</h3>
+  <img src="kakao-qr-code.png" width="220" height="220" alt="카카오톡 친구 추가 QR코드">
+  <p>카카오톡 친구 추가는 휴대폰에서만 할 수 있어요.<br>휴대폰 카메라로 QR코드를 찍어 주세요.</p>
+  <button type="button" id="qr-close">닫기</button>
+</dialog>
+
+<script>
+  // 개인 프로필 QR 링크는 카톡 앱의 QR 스캔에서만 열린다.
+  // 휴대폰에서는 카톡 버튼을 숨기고, PC에서는 링크 대신 QR코드 창을 띄운다.
+  (function () {
+    var dlg = document.getElementById('qr-dialog');
+    var isPhone = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (isPhone) { document.documentElement.classList.add('is-phone'); return; }
+    if (!dlg || typeof dlg.showModal !== 'function') return;
+    document.querySelectorAll('[data-kakao]').forEach(function (a) {
+      a.addEventListener('click', function (e) { e.preventDefault(); dlg.showModal(); });
+    });
+    document.getElementById('qr-close').addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  })();
+</script>
 
 </body>
 </html>
