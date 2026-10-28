@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>지혜파트너스 | 소상공인 경리 업무 지원</title>
+<meta name="description" content="증빙 정리, 입출금·거래처 관리, 급여 대장 정리, 세무사무소 제출 자료 준비까지. 세무·회계 실무 30년 신지혜 대표의 지혜파트너스가 사업장 경리 업무를 돕습니다. 010-2422-8486">
+<meta property="og:type" content="website">
+<meta property="og:title" content="지혜파트너스 | 소상공인 경리 업무 지원">
+<meta property="og:description" content="증빙 정리부터 세무사무소 제출 자료 준비까지, 사업장 경리 업무를 꼼꼼하게 돕습니다. 010-2422-8486">
+<meta name="theme-color" content="#0E2A86">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' rx='24' fill='%230E2A86'/%3E%3Cpath d='M22 30H50M36 30L23 66M36 43L49 66M68 24V72' fill='none' stroke='white' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap">
+<style>
+  :root{
+    --page:#F3F6FC; --paper:#FFFFFF; --ink:#111827; --ink-2:#2B3445; --ink-3:#556070; --muted:#6B7585;
+    --line:#E3E8F2; --blue:#0E2A86; --blue-2:#1C3FB8; --blue-deep:#081C5E; --blue-soft:#DCE6FB; --blue-tint:#EEF3FD;
+    --sans:'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth; scroll-padding-top:24px}
+  body{margin:0; background:var(--page); color:var(--ink); font-family:var(--sans); line-height:1.65; word-break:keep-all; -webkit-font-smoothing:antialiased}
+  a{color:var(--blue-2)} a:hover{color:var(--blue)}
+  svg{display:block}
+  h1,h2,h3,p{margin:0}
+
+  .shell{max-width:1200px; margin:0 auto; padding:24px 24px 0}
+  .sheet{background:var(--paper); border-radius:28px; overflow:hidden}
+
+  /* 히어로 */
+  .hero{position:relative; min-height:620px; display:flex; flex-direction:column; color:#fff; isolation:isolate;
+    background:
+      radial-gradient(60% 80% at 82% 18%, #3157D8 0%, rgba(49,87,216,0) 60%),
+      radial-gradient(55% 70% at 18% 90%, #2348C4 0%, rgba(35,72,196,0) 62%),
+      radial-gradient(40% 50% at 55% 55%, #183AAE 0%, rgba(24,58,174,0) 70%),
+      linear-gradient(160deg, #0E2A86 0%, #0A2272 55%, #081C5E 100%)}
+  .hero .waves{position:absolute; inset:0; z-index:-1; width:100%; height:100%; opacity:.55}
+  .topnav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:28px 40px}
+  .logo{display:flex; align-items:center; gap:12px; color:#fff; text-decoration:none}
+  .logo svg{flex:none}
+  .logo .word{display:flex; flex-direction:column; line-height:1.15}
+  .logo .word b{font-size:1.15rem; font-weight:700; letter-spacing:-.02em}
+  .logo .word small{font-size:.62rem; font-weight:500; letter-spacing:.28em; opacity:.75}
+  .logo:hover{color:#fff}
+  .foot-logo{display:flex; align-items:center; gap:10px; color:var(--ink); font-weight:700; font-size:1rem; letter-spacing:-.02em}
+  .topnav ul{display:flex; gap:36px; list-style:none; margin:0; padding:0}
+  .topnav ul a, .topnav .contact-link{color:rgba(255,255,255,.86); text-decoration:none; font-size:.95rem; font-weight:500}
+  .topnav ul a:hover, .topnav .contact-link:hover{color:#fff}
+  .topnav ul a[aria-current]{color:#fff}
+  .topnav ul a[aria-current]::before{content:"• "; }
+  .hero-body{flex:1; display:flex; flex-direction:column; justify-content:center; padding:40px 40px 40px 22%}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.9rem); font-weight:600; line-height:1.22; letter-spacing:-.03em; max-width:760px}
+  .hero .lead{margin-top:22px; max-width:520px; font-size:1.06rem; color:rgba(255,255,255,.82)}
+  .pill{margin-top:40px; align-self:flex-start; display:inline-flex; align-items:center; gap:14px; min-height:50px; padding:0 10px 0 24px; border-radius:999px; background:#fff; color:var(--ink); font-weight:600; text-decoration:none}
+  .pill span{width:34px; height:34px; border-radius:50%; background:var(--blue-tint); display:grid; place-items:center; color:var(--blue)}
+  .pill:hover{color:var(--blue)}
+  .hero-foot{display:flex; justify-content:space-between; padding:0 40px 28px; font-size:.88rem; color:rgba(255,255,255,.66)}
+  @media (max-width:860px){
+    .topnav{padding:22px 24px}
+    .topnav ul{display:none}
+    .hero{min-height:560px}
+    .hero-body{padding:24px}
+    .hero-foot{padding:0 24px 22px}
+  }
+
+  /* 공통 섹션: 왼쪽 라벨 + 오른쪽 내용 */
+  .block{display:grid; grid-template-columns:200px minmax(0,1fr); gap:24px; padding:104px 40px}
+  .label{display:flex; align-items:center; gap:10px; height:fit-content; padding-top:12px; font-size:.82rem; font-weight:600; letter-spacing:.08em; color:var(--ink-3)}
+  .label::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--ink)}
+  .block h2{font-size:clamp(1.7rem,3.4vw,2.6rem); font-weight:600; line-height:1.3; letter-spacing:-.03em}
+  .block h2 em{font-style:normal; color:var(--blue-2)}
+  .intro{margin-top:22px; max-width:640px; font-size:1.06rem; color:var(--ink-3)}
+  .intro + .intro{margin-top:14px}
+  @media (max-width:860px){ .block{grid-template-columns:1fr; gap:12px; padding:72px 24px} }
+
+  /* 숫자 */
+  .stats{margin-top:56px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px}
+  .stat b{display:block; font-size:clamp(2rem,4vw,3rem); font-weight:600; letter-spacing:-.03em; line-height:1.1}
+  .stat span{display:block; margin-top:10px; padding-top:12px; border-top:1px solid var(--line); font-size:.95rem; font-weight:500; color:var(--ink-2)}
+  @media (max-width:640px){ .stats{grid-template-columns:1fr} }
+
+  /* 장식 배너 (사진 대신) */
+  .banner{margin-top:48px; height:240px; border-radius:18px; overflow:hidden; position:relative;
+    background:linear-gradient(120deg, var(--blue-deep), var(--blue-2))}
+  .banner .ledger{position:absolute; right:-20px; top:-30px; transform:rotate(-14deg); font-weight:300; font-size:5.5rem; line-height:1; letter-spacing:.08em; color:rgba(255,255,255,.18); white-space:pre; font-variant-numeric:tabular-nums}
+  .banner p{position:absolute; left:32px; bottom:28px; right:32px; color:#fff; font-size:clamp(1.15rem,2.4vw,1.5rem); font-weight:600; letter-spacing:-.02em}
+  @media (max-width:640px){ .banner{height:200px} .banner .ledger{font-size:3.6rem} }
+
+  /* 경력 타일 */
+  .tiles{margin-top:56px; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px}
+  .tile{min-height:300px; border-radius:18px; padding:28px 24px; display:flex; flex-direction:column; justify-content:space-between; gap:40px}
+  .tile.dark{background:var(--blue); color:#fff}
+  .tile.light{background:var(--blue-soft); color:var(--ink)}
+  .tile .ic{width:36px; height:36px; border:1.5px solid currentColor; border-radius:6px; display:grid; place-items:center; opacity:.9}
+  .tile h3{font-size:1.18rem; font-weight:600; line-height:1.4; letter-spacing:-.02em}
+  .tile p{margin-top:12px; font-size:.93rem; line-height:1.6}
+  .tile.dark p{color:rgba(255,255,255,.8)}
+  .tile.light p{color:var(--ink-2)}
+  .scope{margin-top:24px; padding:18px 22px; border-radius:14px; background:var(--blue-tint); color:var(--ink-2); font-size:.95rem}
+  @media (max-width:1000px){ .tiles{grid-template-columns:repeat(2,minmax(0,1fr))} }
+  @media (max-width:520px){ .tiles{grid-template-columns:1fr} .tile{min-height:0} }
+
+  /* 원칙 섹션 */
+  .values{position:relative; padding:96px 40px; color:#fff; background:
+      radial-gradient(50% 70% at 85% 20%, #2A50D0 0%, rgba(42,80,208,0) 60%),
+      linear-gradient(150deg, #0A2272, #081C5E)}
+  .values .label{color:rgba(255,255,255,.7)} .values .label::before{background:#fff}
+  .values h2{margin-top:18px; max-width:640px; font-size:clamp(1.7rem,3.4vw,2.6rem); font-weight:600; line-height:1.3; letter-spacing:-.03em}
+  .notes{margin-top:48px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; max-width:900px; margin-left:auto}
+  .note{background:#fff; color:var(--ink-2); border-radius:14px; padding:22px 24px; font-size:.98rem; box-shadow:0 10px 30px rgba(8,28,94,.25)}
+  .note b{color:var(--blue-2)}
+  .note:nth-child(even){transform:translateY(28px)}
+  @media (max-width:760px){ .values{padding:72px 24px} .notes{grid-template-columns:1fr} .note:nth-child(even){transform:none} }
+
+  /* 연락처 */
+  .contact .actions{margin-top:36px; display:flex; flex-wrap:wrap; gap:12px}
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:56px; padding:0 28px; border-radius:999px; font-weight:600; font-size:1.08rem; text-decoration:none}
+  .btn-blue{background:var(--blue); color:#fff} .btn-blue:hover{background:var(--blue-deep); color:#fff}
+  .btn-line{border:1.5px solid var(--line); color:var(--ink); background:#fff} .btn-line:hover{border-color:var(--blue-2); color:var(--blue-2)}
+  .contact .hint{margin-top:16px; font-size:.95rem; color:var(--muted)}
+
+  footer{max-width:1200px; margin:0 auto; padding:28px 24px 40px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px 24px; font-size:.88rem; color:var(--muted)}
+
+  /* 모바일 하단 고정 버튼 */
+  .call-bar{display:none}
+  @media (max-width:640px){
+    .shell{padding:12px 12px 0}
+    .sheet{border-radius:20px}
+    body{padding-bottom:84px}
+    .call-bar{display:flex; gap:8px; position:fixed; left:12px; right:12px; bottom:12px; z-index:30}
+    .call-bar .btn{flex:1; box-shadow:0 8px 24px rgba(8,28,94,.22)}
+  }
+
+  :focus-visible{outline:3px solid #7EA0FF; outline-offset:3px; border-radius:8px}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+    <symbol id="mark-strokes" viewBox="0 0 96 96"><path d="M22 30H50M36 30L23 66M36 43L49 66M68 24V72" fill="none" stroke="currentColor" stroke-width="7.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  </defs>
+</svg>
+
+<div class="shell">
+<div class="sheet" id="top">
+
+  <header class="hero">
+    <svg class="waves" viewBox="0 0 1200 620" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M-50 520 C 250 380, 420 640, 720 470 S 1150 300, 1260 380" fill="none" stroke="#5B7CF0" stroke-width="90" stroke-opacity=".18"/>
+      <path d="M-50 160 C 200 40, 380 300, 640 210 S 1050 -20, 1260 120" fill="none" stroke="#6F8DF5" stroke-width="140" stroke-opacity=".12"/>
+      <path d="M300 680 C 420 420, 700 520, 860 300 S 1100 80, 1260 60" fill="none" stroke="#89A4FA" stroke-width="60" stroke-opacity=".14"/>
+    </svg>
+    <nav class="topnav" aria-label="주 메뉴">
+      <a class="logo" href="#top" aria-label="지혜파트너스 처음으로">
+        <svg width="40" height="40" viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" rx="24" fill="#FFFFFF"/><use href="#mark-strokes" width="96" height="96" style="color:#0E2A86"/></svg>
+        <span class="word"><b>지혜파트너스</b><small>JIHYE PARTNERS</small></span>
+      </a>
+      <ul>
+        <li><a href="#top" aria-current="page">홈</a></li>
+        <li><a href="#about">소개</a></li>
+        <li><a href="#services">서비스</a></li>
+      </ul>
+      <a class="contact-link" href="#contact">문의하기</a>
+    </nav>
+    <div class="hero-body">
+      <h1>사업장 경리,<br>지혜파트너스가<br>함께 정리합니다</h1>
+      <p class="lead">증빙 정리부터 입출금 관리, 세무사무소에 보낼 자료 준비까지. 대표님이 놓치기 쉬운 경리 업무를 꼼꼼하게 도와드립니다.</p>
+      <a class="pill" href="#contact">문의하기<span><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+    </div>
+    <div class="hero-foot"><span>대표 신지혜 · 세무·회계 실무 경력 30년</span><span>아래로 ↓</span></div>
+  </header>
+
+  <section class="block" id="about">
+    <p class="label">소개</p>
+    <div>
+      <h2>경리의 기본을 아는 사람이<br><em>대표님 곁에서</em> 챙깁니다</h2>
+      <p class="intro">안녕하세요, 지혜파트너스 대표 신지혜입니다. 30년간 세무결산과 경리·회계 실무를 해 왔고, 지금도 세무사무소에서 실무를 이어 가고 있습니다.</p>
+      <p class="intro">그동안 바쁜 대표님들이 영수증 한 장, 통장 내역 한 줄 때문에 얼마나 애를 쓰시는지 가까이에서 봐 왔습니다. 지혜파트너스는 그 번거로운 경리 일을 대표님 대신 차곡차곡 정리해 드리려고 만들었습니다.</p>
+
+      <div class="stats">
+        <div class="stat"><b>30년</b><span>세무 · 회계 실무 경력</span></div>
+        <div class="stat"><b>4가지</b><span>경리 업무 지원</span></div>
+        <div class="stat"><b>소상공인</b><span>작은 사업장 맞춤</span></div>
+      </div>
+
+      <div class="banner" aria-hidden="true">
+        <div class="ledger">0 3 2 2 0
+9 8 . 2 8
+1 2 6 7 4</div>
+        <p>증빙 한 장, 숫자 하나까지 꼼꼼하게.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="services" style="padding-top:0">
+    <p class="label">서비스</p>
+    <div>
+      <h2>번거로운 경리 업무,<br><em>이렇게 도와드립니다</em></h2>
+      <div class="tiles">
+        <article class="tile dark">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2z"/><path d="M9 7h6M9 11h6M9 15h4"/></svg></div>
+          <div><h3>증빙 수집 · 정리</h3><p>영수증, 세금계산서, 카드 내역 같은 증빙을 빠짐없이 모아 정리합니다.</p></div>
+        </article>
+        <article class="tile light">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h13l-3-3M17 17H4l3 3"/></svg></div>
+          <div><h3>입출금 · 거래처 관리</h3><p>통장 입출금 내역과 매출·매입 거래처를 한눈에 보이게 정리합니다.</p></div>
+        </article>
+        <article class="tile dark">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4h5M16 8h5M18 12h3"/></svg></div>
+          <div><h3>급여 대장 정리</h3><p>직원 급여 대장 등 사업장 내부 서류를 깔끔하게 정리합니다.</p></div>
+        </article>
+        <article class="tile light">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 12l3 3 5-6"/></svg></div>
+          <div><h3>세무사무소 제출 자료 준비</h3><p>대표님이 거래하시는 세무사무소에 보낼 자료를 빠짐없이 챙겨 드립니다.</p></div>
+        </article>
+      </div>
+      <p class="scope">세금 신고, 장부 기장, 세무 상담은 세무사의 업무입니다. 지혜파트너스는 세무사 업무를 대신하지 않으며, 대표님이 거래하시는 세무사무소에 보낼 자료 준비를 돕습니다.</p>
+    </div>
+  </section>
+
+  <section class="values">
+    <p class="label">일하는 원칙</p>
+    <h2>늘 정직하게,<br>오래 함께하겠습니다</h2>
+    <div class="notes">
+      <p class="note"><b>꼼꼼하게</b> · 증빙 한 장도 빠뜨리지 않고 챙깁니다.</p>
+      <p class="note"><b>한눈에</b> · 정리한 자료는 대표님이 보기 쉽게 드립니다.</p>
+      <p class="note"><b>정직하게</b> · 할 수 있는 일과 없는 일을 분명히 말씀드립니다.</p>
+      <p class="note"><b>꾸준히</b> · 한 번이 아니라 매달 함께하겠습니다.</p>
+    </div>
+  </section>
+
+  <section class="block contact" id="contact">
+    <p class="label">문의하기</p>
+    <div>
+      <h2>경리 업무, <em>편하게 문의하세요</em></h2>
+      <p class="intro">통화가 어려우시면 문자로 성함과 업종을 남겨 주세요. 확인 후 연락드리겠습니다.</p>
+      <div class="actions">
+        <a class="btn btn-blue" href="tel:01024228486"><svg width="20" height="20" aria-hidden="true"><use href="#i-phone"/></svg>010-2422-8486</a>
+        <a class="btn btn-line" href="sms:01024228486?body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94.%20%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%B3%B4%EA%B3%A0%20%EC%97%B0%EB%9D%BD%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4.%20%EC%84%B1%ED%95%A8%3A%20"><svg width="20" height="20" aria-hidden="true"><use href="#i-msg"/></svg>문자 보내기</a>
+      </div>
+      <p class="hint">휴대폰에서 누르시면 바로 연결됩니다.</p>
+    </div>
+  </section>
+
+</div>
+</div>
+
+<footer>
+  <span class="foot-logo"><svg width="28" height="28" viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" rx="24" fill="#0E2A86"/><use href="#mark-strokes" width="96" height="96" style="color:#FFFFFF"/></svg>지혜파트너스</span>
+  <span>상호 지혜 파트너스 · 대표 신지혜 · 사업자등록번호 795-24-02214</span>
+  <span>010-2422-8486</span>
+</footer>
+
+<div class="call-bar">
+  <a class="btn btn-blue" href="tel:01024228486"><svg width="20" height="20" aria-hidden="true"><use href="#i-phone"/></svg>전화</a>
+  <a class="btn btn-line" href="sms:01024228486"><svg width="20" height="20" aria-hidden="true"><use href="#i-msg"/></svg>문자</a>
+</div>
+
+</body>
+</html>
