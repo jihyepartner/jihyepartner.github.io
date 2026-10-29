@@ -50,8 +50,8 @@
   .logo{display:flex; align-items:center; gap:12px; color:#fff; text-decoration:none}
   .logo svg{flex:none}
   .logo .word{display:flex; flex-direction:column; line-height:1.15}
-  .logo .word b{font-size:1.15rem; font-weight:700; letter-spacing:-.02em}
-  .logo .word small{font-size:.62rem; font-weight:500; letter-spacing:.28em; opacity:.75}
+  .logo .word b{font-size:1.35rem; font-weight:700; letter-spacing:-.02em}
+  .logo .word small{font-size:.7rem; font-weight:500; letter-spacing:.28em; opacity:.75}
   .logo:hover{color:#fff}
   .foot-logo{display:flex; align-items:center; gap:10px; color:var(--ink); font-weight:700; font-size:1rem; letter-spacing:-.02em}
   .topnav ul{display:flex; gap:36px; list-style:none; margin:0; padding:0}
@@ -62,14 +62,20 @@
   .hero-body{flex:1; display:flex; flex-direction:column; justify-content:center; padding:40px 40px 40px 22%}
   .hero h1{font-size:clamp(2.2rem,5vw,3.9rem); font-weight:600; line-height:1.22; letter-spacing:-.03em; max-width:760px}
   .hero .lead{margin-top:22px; max-width:520px; font-size:1.06rem; color:rgba(255,255,255,.82)}
-  .chips{margin-top:20px; display:flex; flex-wrap:wrap; gap:10px}
-  .chip{display:inline-flex; align-items:center; gap:8px; min-height:40px; padding:0 16px; border-radius:999px; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); color:#fff; font-size:.98rem; font-weight:600; text-decoration:none}
-  .chip:hover{background:rgba(255,255,255,.24); color:#fff}
-  .chip svg{flex:none}
+  .hero-eyebrow{margin-bottom:18px; font-size:1.02rem; font-weight:600; color:rgba(255,255,255,.8)}
+  .hero h1.calm{font-size:clamp(2rem,4.4vw,3.2rem)}
+  .hero h1 em{font-style:normal; color:#C7D6FF}
+  .features{margin-top:28px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; max-width:680px}
+  .feature{display:flex; flex-direction:column; gap:4px; padding:16px 20px; border-radius:14px; background:#fff; color:var(--ink); text-decoration:none; box-shadow:0 4px 14px rgba(8,28,94,.12); transition:background .15s}
+  .feature:hover{background:var(--blue-tint); color:var(--ink)}
+  .feature b{font-size:1.05rem; font-weight:700; letter-spacing:-.02em; color:var(--blue)}
+  .feature .desc{font-size:.87rem; line-height:1.6; color:var(--ink-3)}
+  @media (max-width:640px){ .features{grid-template-columns:1fr} .feature{padding:18px 20px} }
   .pill{margin-top:32px; align-self:flex-start; display:inline-flex; align-items:center; gap:14px; min-height:50px; padding:0 10px 0 24px; border-radius:999px; background:#fff; color:var(--ink); font-weight:600; text-decoration:none}
   .pill span{width:34px; height:34px; border-radius:50%; background:var(--blue-tint); display:grid; place-items:center; color:var(--blue)}
   .pill:hover{color:var(--blue)}
   .hero-foot{display:flex; justify-content:space-between; align-items:flex-end; padding:0 40px 28px; font-size:.88rem; line-height:1.7; color:rgba(255,255,255,.66)}
+  .hero-foot .who{font-size:1.02rem; font-weight:500; color:rgba(255,255,255,.82)}
   @media (max-width:860px){
     .topnav{padding:22px 24px}
     .topnav ul{display:none}
@@ -203,7 +209,7 @@
     </svg>
     <nav class="topnav" aria-label="주 메뉴">
       <a class="logo" href="#top" aria-label="지혜파트너스 처음으로">
-        <svg width="40" height="40" viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" rx="24" fill="#FFFFFF"/><use href="#mark-strokes" width="96" height="96" style="color:#0E2A86"/></svg>
+        <svg width="48" height="48" viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" rx="24" fill="#FFFFFF"/><use href="#mark-strokes" width="96" height="96" style="color:#0E2A86"/></svg>
         <span class="word"><b>지혜파트너스</b><small>JIHYE PARTNERS</small></span>
       </a>
       <ul>
@@ -214,15 +220,22 @@
       <a class="contact-link" href="#contact">문의하기</a>
     </nav>
     <div class="hero-body">
-      <h1>사업장 경리,<br>지혜파트너스가<br>함께 정리합니다</h1>
-      <p class="lead">자체기장 도움과 파트타임 경리 근무부터 증빙 정리, 세무사무소에 보낼 자료 준비까지. 대표님이 놓치기 쉬운 경리 업무를 꼼꼼하게 도와드립니다.</p>
-      <div class="chips">
-        <a class="chip" href="#services"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>자체기장 도움</a>
-        <a class="chip" href="#services"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>파트타임 경리 근무</a>
+      <p class="hero-eyebrow">사업장 경리, 지혜파트너스가 함께 정리합니다</p>
+      <h1 class="calm"><em>자체기장 도움</em>부터<br><em>파트타임 경리</em>까지</h1>
+      <div class="features">
+        <a class="feature" href="#services">
+          <b>자체기장 도움</b>
+          <span class="desc">사장님이 직접 장부를 쓰실 수 있도록 간편장부 · 홈택스 · 경리 프로그램 사용법을 차근차근 알려 드립니다.</span>
+        </a>
+        <a class="feature" href="#services">
+          <b>파트타임 경리 근무</b>
+          <span class="desc">사장님 회사에 직원으로 고용되어, 필요한 시간만큼 파트타임 경리로 근무합니다.</span>
+        </a>
       </div>
+      <p class="lead">증빙 정리, 입출금 · 거래처 관리, 세무사무소에 보낼 자료 준비도 함께 챙깁니다.</p>
       <a class="pill" href="#contact">문의하기<span><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
     </div>
-    <div class="hero-foot"><span>세무·회계 실무 경력 20년 이상<br>실무대표 : 신지혜</span><span>아래로 ↓</span></div>
+    <div class="hero-foot"><span class="who">세무·회계 실무 경력 20년 이상<br>실무대표 : 신지혜</span><span>아래로 ↓</span></div>
   </header>
 
   <section class="block" id="about">
